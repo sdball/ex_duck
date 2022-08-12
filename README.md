@@ -1,6 +1,6 @@
 # ExDuck
 
-**TODO: Add description**
+An Elixir Client for the DuckDuckGo Instant Answer API
 
 ## Installation
 
