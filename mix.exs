@@ -10,7 +10,7 @@ defmodule ExDuck.MixProject do
       version: @version,
       elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
-      description: "ExDuck is an Elixir library to query the DuckDuckGo Instant Answer API",
+      description: "Query the DuckDuckGo Instant Answer API. Answer results can be converted to markdown.",
       deps: deps(),
       name: "ExDuck",
       source_url: @github,
