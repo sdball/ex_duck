@@ -1,6 +1,6 @@
 # ExDuck
 
-ExDuck is an Elixir library to query the [DuckDuckGo Instant Answer API](https://duckduckgo.com/api) and format the results.
+ExDuck is an Elixir library to query the [DuckDuckGo Instant Answer API](https://duckduckgo.com/api). It can convert answer results to markdown.
 
 ## Installation
 
@@ -10,7 +10,7 @@ ExDuck can be installed by adding `ex_duck` to your list of dependencies in
 ```elixir
 def deps do
   [
-    {:ex_duck, "~> 0.1.1"}
+    {:ex_duck, "~> 0.1.2"}
   ]
 end
 ```

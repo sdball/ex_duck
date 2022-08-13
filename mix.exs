@@ -2,7 +2,7 @@ defmodule ExDuck.MixProject do
   use Mix.Project
 
   @github "https://github.com/sdball/ex_duck"
-  @version "0.1.1"
+  @version "0.1.2"
 
   def project do
     [
@@ -10,7 +10,7 @@ defmodule ExDuck.MixProject do
       version: @version,
       elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
-      description: "Query the DuckDuckGo Instant Answer API. Can convert answer results to markdown.",
+      description: "ExDuck allows you to query the DuckDuckGo Instant Answer API. Can convert answer results to markdown.",
       deps: deps(),
       name: "ExDuck",
       source_url: @github,
