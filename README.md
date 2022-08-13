@@ -4,8 +4,8 @@ An Elixir Client for the DuckDuckGo Instant Answer API
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `ex_duck` to your list of dependencies in `mix.exs`:
+ExDuck can be installed by adding `ex_duck` to your list of dependencies in
+`mix.exs`:
 
 ```elixir
 def deps do
@@ -15,7 +15,4 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/ex_duck>.
-
+Documentation is [published on hexdocs](https://hexdocs.pm/ex_duck).
