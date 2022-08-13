@@ -2,7 +2,7 @@ defmodule ExDuck.MixProject do
   use Mix.Project
 
   @github "https://github.com/sdball/ex_duck"
-  @version "0.1.0"
+  @version "0.1.1"
 
   def project do
     [

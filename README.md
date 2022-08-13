@@ -10,7 +10,7 @@ ExDuck can be installed by adding `ex_duck` to your list of dependencies in
 ```elixir
 def deps do
   [
-    {:ex_duck, "~> 0.1.0"}
+    {:ex_duck, "~> 0.1.1"}
   ]
 end
 ```
