@@ -144,6 +144,10 @@ defmodule ExDuck do
     }
   end
 
+  def understand(answer = %{"RelatedTopics" => related}) when length(related) > 0 do
+    understand(%{answer | "Type" => "C"})
+  end
+
   def understand(%{"Type" => ""}) do
     %{
       type: "unknown",
