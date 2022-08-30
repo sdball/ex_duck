@@ -22,6 +22,7 @@ defmodule ExDuck.MixProject do
   defp deps do
     [
       {:req, "~> 0.3.0"},
+      {:abacus, "~> 2.0"},
       {:ex_doc, "~> 0.27", only: :dev, runtime: false},
     ]
   end

@@ -170,6 +170,21 @@ defmodule ExDuck do
     }
   end
 
+  def understand(%{"AnswerType" => "dice_roll", "Answer" => answer}) when byte_size(answer) > 0 do
+    %{
+      type: "dice roll",
+      answer: answer
+    }
+  end
+
+  def understand(%{"AnswerType" => answer_type, "Answer" => answer}) when byte_size(answer) > 0 do
+    %{
+      type: answer_type,
+      heading: "#{answer_type}",
+      answer: answer
+    }
+  end
+
   def understand(%{"Type" => "E"}) do
     %{
       type: "error",
@@ -290,6 +305,30 @@ defmodule ExDuck do
 
   def to_markdown(answer = %{type: "calculation"}) do
     answer[:heading]
+  end
+
+  def to_markdown(%{type: "dice roll", answer: rolls}) when byte_size(rolls) > 0 do
+    answer =
+      if Regex.match?(~r/[+-]/, rolls) do
+        Abacus.eval(rolls) |> case do
+          {:ok, result} -> "#{rolls} = #{result}"
+          _ -> rolls
+        end
+      else
+        rolls
+      end
+
+    """
+    # Dice Roll : #{answer}
+    """
+  end
+
+  def to_markdown(%{type: answer_type, answer: answer}) when byte_size(answer) > 0 do
+    """
+    # #{answer_type}
+
+    #{answer}
+    """
   end
 
   defp to_markdown(answer, 1) do
